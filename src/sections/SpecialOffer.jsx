@@ -1,6 +1,6 @@
 import { arrowRight } from "../assets/icons";
 import { offer } from "../assets/images";
-import  Button from "../components/Button";
+import { Button } from "../components";
 
 const SpecialOffer = () => {
   return (
@@ -32,6 +32,7 @@ const SpecialOffer = () => {
         <div className='mt-11 flex flex-wrap gap-4'>
           <Button label='Shop now' iconURL={arrowRight} />
           <Button
+            iconURL={arrowRight}
             label='Learn more'
             backgroundColor='bg-white'
             borderColor='border-slate-gray'
