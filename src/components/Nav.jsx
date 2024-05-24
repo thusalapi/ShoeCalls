@@ -16,14 +16,14 @@ const Nav = () => {
                 {navLinks.map((item) => (
                     <li key={item.label}>
                         <a href={item.href} 
-                        className='font-montserrat leading-normal text-lg text-white'>{item.label}
+                        className='font-montserrat leading-normal text-lg text-white hover:text-red-500 transition-colors duration-200'>{item.label}
                         </a>
                     </li>
                 ))}
             </ul>
-            <div className='hidden max-lg:block'>
-                <img src={hamburger} alt="hamburger" width={25} height={25}/>
-            </div>
+        <div className='hidden max-lg:block'>
+            <img src={hamburger} alt="hamburger" width={25} height={25} style={{filter: 'invert(1)'}}/>
+        </div>
         </nav>
     </header>
   )
