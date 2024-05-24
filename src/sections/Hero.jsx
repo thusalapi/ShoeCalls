@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Motion, spring } from 'react-motion';
 
 import { shoes, statistics } from "../constants";
 import { Button, ShoeCard } from "../components";
@@ -44,22 +43,14 @@ const Hero = () => {
         </div>
       </div>
       <div className='relative flex-1 flex justify-center items-center xl:min-h-screen max:xl:py-40 bg-primary bg-hero bg-cover bg-center'>
-      <Motion defaultStyle={{ rotate: 0 }} style={{ rotate: spring(5, { stiffness: 2, damping: 0.5 }) }}>
-        {(style) => (
-          <img
-            src={bigShoeImg}
-            alt='shoe collection'
-            style={{
-              transform: `rotate(${style.rotate}deg)`,
-              width: 610,
-              height: 500,
-              objectFit: 'contain',
-              position: 'relative',
-              zIndex: 10,
-            }}
-          />
-        )}
-      </Motion>
+        <img
+          src={bigShoeImg}
+          alt='shoe collection'
+          width={610}
+          height={500}
+          className='object-containt relative z-10'
+
+        />
         <div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6'>
           {shoes.map((image, index) => (
             <div key={index}>
